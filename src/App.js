@@ -13,12 +13,14 @@ class App extends Component {
 
 
   render() {
-
+    // now make the counter display none with the class of hidden only when the slider is showing so that we don't need to unmount in order to show slider
     const buttonText = this.state.visible ? 'hide' : 'show';
     const slider = this.state.visible ? (
       <ImageSlider />
     ) : (
-      <div> <Counter /></div>
+      <div className = {!this.state.visible ? 'visible': 'hidden'}>
+         <Counter />
+      </div>
     );
 
     return (

@@ -26,3 +26,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.hidden{
+  /* This does nothing because its hidden without this */
+  display: none;
+}
+.visible{
+  background-color: #f2f2f2;
+}
